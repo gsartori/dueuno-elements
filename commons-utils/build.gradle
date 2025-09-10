@@ -4,13 +4,13 @@ plugins {
 
 dependencies {
     // Servlet
-    implementation "javax.servlet:javax.servlet-api:4.0.0"
+    implementation "jakarta.servlet:jakarta.servlet-api:6.0.0"
 
     // SSH
     implementation "com.jcraft:jsch:0.1.55"
 
     // FTP
-    implementation "commons-net:commons-net:3.10.0"
+    implementation "commons-net:commons-net:3.12.0"
 
     // 1D/2D codes generation
     api "com.google.zxing:core:3.5.3"

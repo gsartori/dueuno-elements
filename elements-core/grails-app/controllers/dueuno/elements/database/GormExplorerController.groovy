@@ -34,7 +34,7 @@ import grails.gorm.DetachedCriteria
 import grails.gorm.multitenancy.CurrentTenant
 import grails.plugin.springsecurity.annotation.Secured
 
-import javax.annotation.PostConstruct
+import jakarta.annotation.PostConstruct
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime

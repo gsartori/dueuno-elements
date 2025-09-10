@@ -28,7 +28,7 @@ import dueuno.elements.types.QuantityUnit
 import dueuno.elements.types.Type
 import grails.gorm.multitenancy.CurrentTenant
 
-import javax.annotation.PostConstruct
+import jakarta.annotation.PostConstruct
 import java.time.LocalDate
 
 @CurrentTenant

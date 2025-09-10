@@ -1,37 +1,21 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        maven {
-            url = 'https://repo.grails.org/grails/restricted'
-        }
-    }
-    dependencies { // Not Published to Gradle Plugin Portal
-        classpath "cloud.wondrify:asset-pipeline-gradle"
-        classpath platform("org.apache.grails:grails-bom:$grailsVersion")
-        classpath "org.apache.grails:grails-data-hibernate5"
-        classpath "org.apache.grails:grails-gradle-plugins"
-    }
-}
-
 plugins {
-    id "war"
-    id "idea"
-    id "eclipse"
+    id "groovy"
+    id "org.apache.grails.gradle.grails-web"
+    id "org.apache.grails.gradle.grails-gsp"
+    id "org.apache.grails.gradle.grails-plugin"
+    id "cloud.wondrify.asset-pipeline"
     id "dueuno-asciidoctor"
     id "dueuno-codenarc"
     id "dueuno-publish"
+    id "eclipse"
+    id "idea"
 }
-
-// Not Published to Gradle Plugin Portal
-apply plugin: "org.apache.grails.gradle.grails-web"
-apply plugin: "org.apache.grails.gradle.grails-gsp"
-apply plugin: "cloud.wondrify.asset-pipeline"
-apply plugin: "org.apache.grails.gradle.grails-plugin"
 
 group = projectGroup
 version = projectVersion
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven {
         url = 'https://repo.grails.org/grails/restricted'
@@ -72,9 +56,6 @@ dependencies {
     testImplementation "org.apache.grails:grails-testing-support-datamapping"
     testImplementation "org.apache.grails:grails-testing-support-web"
     testImplementation "org.spockframework:spock-core"
-
-    // Spring Boot DevTools may cause performance slowdowns or compatibility issues on larger applications
-    developmentOnly "org.springframework.boot:spring-boot-devtools"
 }
 
 tasks.withType(Test) {

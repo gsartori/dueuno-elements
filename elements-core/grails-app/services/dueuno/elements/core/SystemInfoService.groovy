@@ -20,7 +20,7 @@ import grails.plugins.GrailsPluginManager
 import groovy.transform.CompileStatic
 import org.springframework.beans.factory.annotation.Autowired
 
-import javax.servlet.ServletContext
+import jakarta.servlet.ServletContext
 
 /**
  * @author Gianluca Sartori

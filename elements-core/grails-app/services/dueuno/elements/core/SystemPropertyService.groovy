@@ -18,10 +18,9 @@ import dueuno.commons.utils.FileUtils
 import dueuno.commons.utils.StringUtils
 import dueuno.elements.exceptions.ArgsException
 import grails.gorm.DetachedCriteria
-import grails.gorm.multitenancy.WithoutTenant
 import groovy.util.logging.Slf4j
 
-import javax.annotation.PostConstruct
+import jakarta.annotation.PostConstruct
 
 /**
  * @author Gianluca Sartori

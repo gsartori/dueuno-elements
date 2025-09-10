@@ -2,9 +2,19 @@ plugins {
     id "dueuno-application"
 }
 
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url = 'https://repo.grails.org/grails/restricted'
+    }
+}
+
 dependencies {
     implementation project(":elements-core")
     implementation project(":elements-extra")
+
+    // Spring Boot DevTools may cause performance slowdowns or compatibility issues on larger applications
     developmentOnly "org.springframework.boot:spring-boot-devtools"
 
     // LDAP

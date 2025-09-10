@@ -14,18 +14,16 @@
  */
 package dueuno.elements.core
 
-import io.micronaut.context.annotation.Bean
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.web.servlet.ServletContextInitializer
 
-import javax.servlet.ServletContext
-import javax.servlet.ServletException
+import jakarta.servlet.ServletContext
+import jakarta.servlet.ServletException
 
 /**
  * @author Gianluca Sartori
  */
 
-@Bean
 class SessionInitializer implements ServletContextInitializer {
 
     @Autowired
@@ -35,4 +33,5 @@ class SessionInitializer implements ServletContextInitializer {
     void onStartup(ServletContext servletContext) throws ServletException {
         servletContext.sessionCookieConfig.name = applicationService.applicationName.toUpperCase() + '-SESSION'
     }
+
 }

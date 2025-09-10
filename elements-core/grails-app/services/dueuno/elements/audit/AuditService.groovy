@@ -22,7 +22,7 @@ import grails.gorm.multitenancy.CurrentTenant
 import groovy.json.JsonBuilder
 import groovy.util.logging.Slf4j
 
-import javax.servlet.http.HttpServletRequest
+import jakarta.servlet.http.HttpServletRequest
 import java.time.LocalDateTime
 import java.time.LocalTime
 
