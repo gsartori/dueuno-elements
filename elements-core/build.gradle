@@ -13,7 +13,7 @@ dependencies {
 //    api "org.quartz-scheduler:quartz:2.3.2" // Is not pulled in by defaults
 
     // Websockets
-    api "io.github.zyro23:grails-spring-websocket:2.7.0-SNAPSHOT"
+    api "io.github.zyro23:grails-spring-websocket:2.7.0-RC1"
 
     // System monitoring
     implementation "net.bull.javamelody:javamelody-spring-boot-starter:2.5.1"

@@ -14,7 +14,6 @@
  */
 package dueuno.elements.core
 
-import dueuno.elements.components.Link
 import dueuno.elements.exceptions.ArgsException
 import dueuno.elements.exceptions.ElementsException
 import dueuno.elements.types.Types

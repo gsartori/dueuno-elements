@@ -4,14 +4,16 @@ import dueuno.elements.components.*
 import dueuno.elements.core.Component
 import dueuno.elements.style.TextAlign
 import dueuno.elements.style.TextStyle
+import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
 
 @Slf4j
+@CompileStatic
 class TimerService {
 
     List<Map> list(Integer total) {
 
-        def result = []
+        List<Map> result = []
         for (Integer i = 1; i <= total; i++) {
             result.add([
                     id: i,
