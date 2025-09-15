@@ -58,6 +58,10 @@ dependencies {
     testImplementation "org.spockframework:spock-core"
 }
 
+tasks.withType(GroovyCompile) {
+    groovyOptions.optimizationOptions.indy = false
+}
+
 tasks.withType(Test) {
     useJUnitPlatform()
 }
