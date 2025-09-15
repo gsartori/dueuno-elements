@@ -20,3 +20,7 @@ dependencies {
     implementation "org.apache.groovy:groovy-templates:${groovyVersion}"
     implementation "ch.qos.logback:logback-classic:1.2.12"
 }
+
+tasks.withType(GroovyCompile) {
+    groovyOptions.optimizationOptions.indy = false
+}
