@@ -83,10 +83,10 @@ class BootStrap {
                     description: 'Test tenant',
                     failOnError: true,
                     connectionSource: [
-                            driverClassName: 'com.mysql.cj.jdbc.Driver',
-                            url            : 'jdbc:mysql://localhost:3306/dueuno_elements_test?useSSL=false&createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC',
-                            username       : 'root',
-                            password       : 'root',
+                            driverClassName: 'org.h2.Driver',
+                            url            : 'jdbc:h2:file:./app-test/tenant-test;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE',
+                            username       : 'sa',
+                            password       : '',
                     ]
             )
         }
