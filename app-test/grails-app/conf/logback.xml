@@ -32,7 +32,7 @@
     </root>
 
     <logger name="org.springframework.boot.SpringApplication" level="INFO" />
-    <logger name="dueuno" level="TRACE" />
+    <logger name="dueuno" level="DEBUG" />
 
     <!-- DUEUNO -->
 <!--    <logger name="dueuno.commons.utils.SqlUtils" level="TRACE" />-->
