@@ -28,6 +28,7 @@ import grails.gorm.DetachedCriteria
 import grails.gorm.multitenancy.CurrentTenant
 import grails.gorm.multitenancy.Tenants
 import grails.gorm.multitenancy.WithoutTenant
+import grails.gorm.transactions.Transactional
 import groovy.util.logging.Slf4j
 import org.grails.datastore.mapping.core.connections.ConnectionSource
 
@@ -36,6 +37,8 @@ import org.grails.datastore.mapping.core.connections.ConnectionSource
  */
 
 @Slf4j
+@Transactional
+@WithoutTenant
 class TenantService {
 
     ApplicationService applicationService

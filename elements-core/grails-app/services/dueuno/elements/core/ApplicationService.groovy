@@ -21,6 +21,8 @@ import dueuno.elements.tenants.TenantService
 import dueuno.elements.utils.EnvUtils
 import grails.core.GrailsApplication
 import grails.gorm.multitenancy.Tenants
+import grails.gorm.multitenancy.WithoutTenant
+import grails.gorm.transactions.Transactional
 import grails.util.Holders
 import grails.web.servlet.mvc.GrailsHttpSession
 import groovy.transform.CompileDynamic
@@ -39,6 +41,8 @@ import jakarta.servlet.ServletContext
 
 @Slf4j
 @CompileStatic
+@Transactional
+@WithoutTenant
 class ApplicationService implements LinkGeneratorAware {
 
     GrailsApplication grailsApplication
