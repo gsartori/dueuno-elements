@@ -51,7 +51,6 @@ class ResourceUtils {
         log.trace " --> To Path:   ${toPath}"
         log.trace " --- "
 
-
         for (Resource resource in resources) {
             Boolean isDeployedAsBootJar = resource.URL.protocol.equals('jar')
 
@@ -63,8 +62,8 @@ class ResourceUtils {
 
             } else if (isDeployedAsBootJar) {
                 log.trace "Extracting Resources: Application deployed as JAR"
-                List<String> resourceParts = resource.URL.path.split('/!BOOT-INF/classes/!' + fromPath) as List<String>
-                resourceDir = resourceParts.first() + '/!BOOT-INF/classes' + fromPath
+                List<String> resourceParts = resource.URL.path.split('/BOOT-INF/classes!' + fromPath) as List<String>
+                resourceDir = resourceParts.first() + '/BOOT-INF/classes' + fromPath
                 resourceFile = resourceParts.size() > 1 ? resourceParts.last() : ''
 
             } else {
@@ -199,7 +198,6 @@ class ResourceUtils {
         if (filesystem) filesystem.close()
         if (tempPath) FileUtils.deleteFile(tempPath.toString())
     }
-
 
     static void extractResource(Path root, Path resource, String toPath) {
         toPath = FileUtils.normalizePath(toPath)
