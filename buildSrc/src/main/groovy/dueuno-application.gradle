@@ -12,6 +12,7 @@ group = projectGroup
 version = projectVersion
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven {
         url = 'https://repo.grails.org/grails/restricted'

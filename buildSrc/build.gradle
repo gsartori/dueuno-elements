@@ -4,6 +4,7 @@ plugins {
 
 repositories {
     gradlePluginPortal()
+    mavenLocal()
     maven {
         url = 'https://repo.grails.org/grails/restricted'
     }
