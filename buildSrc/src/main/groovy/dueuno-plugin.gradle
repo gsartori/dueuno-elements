@@ -14,7 +14,7 @@ group = projectGroup
 version = projectVersion
 
 repositories {
-    mavenLocal()
+    //mavenLocal()
     mavenCentral()
     maven {
         url = 'https://repo.grails.org/grails/restricted'
@@ -55,9 +55,9 @@ dependencies {
     testImplementation "org.spockframework:spock-core"
 }
 
-tasks.withType(GroovyCompile) {
-    groovyOptions.optimizationOptions.indy = false
-}
+//tasks.withType(GroovyCompile) {
+//    groovyOptions.optimizationOptions.indy = false
+//}
 
 tasks.withType(Test) {
     useJUnitPlatform()
